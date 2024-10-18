@@ -1,5 +1,9 @@
 spring:
   application:
     name: annexify-storage-service
+
 server:
   port: 8083
+
+file:
+    upload-dir: ${FILE_UPLOAD_DIR:ANURADHD}
