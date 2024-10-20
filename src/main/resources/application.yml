@@ -4,6 +4,9 @@ spring:
 
 server:
   port: 8083
+  error:
+    include-message: always
 
 file:
-    upload-dir: ${FILE_UPLOAD_DIR:ANURADHD}
+    upload-dir: ${FILE_UPLOAD_DIR:"/opt/annexify"}
+

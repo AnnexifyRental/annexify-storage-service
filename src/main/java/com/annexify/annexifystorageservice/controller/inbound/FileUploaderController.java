@@ -14,12 +14,12 @@ public class FileUploaderController {
     @Autowired
     private FileUploaderService fileUploaderService;
 
-    @PostMapping()
-    public void uploadImage(@RequestParam("image") MultipartFile file) {
-        fileUploaderService.uploadFile(file);
+    @PostMapping
+    public String uploadImage(@RequestParam("image") MultipartFile file) {
+        return fileUploaderService.uploadFile(file);
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<byte[]> getImage(@RequestParam String fileName) {
         return fileUploaderService.getFile(fileName);
     }
